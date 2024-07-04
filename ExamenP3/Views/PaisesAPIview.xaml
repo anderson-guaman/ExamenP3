@@ -8,19 +8,22 @@
         <local:PaisesAPIviewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout>
-        <Button Text="Obtener Países" Command="{Binding ObtenerPaisesCommand}" />
-        <CollectionView ItemsSource="{Binding Paises}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10">
-                        <Label Text="{Binding Name.Official}" />
-                        <Label Text="{Binding Region}" />
-                        <Label Text="{Binding SubRegion}" />
-                        <Label Text="{Binding Status}" />
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Button Text="Obtener Países" Command="{Binding ObtenerPaisesCommand}" />
+            <CollectionView ItemsSource="{Binding Paises}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Name.Official}" />
+                            <Label Text="{Binding Region}" />
+                            <Label Text="{Binding SubRegion}" />
+                            <Label Text="{Binding Status}" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+    
 </ContentPage>
