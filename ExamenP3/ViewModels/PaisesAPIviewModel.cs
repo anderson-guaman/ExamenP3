@@ -1,6 +1,9 @@
 ﻿
 
+using ExamenP3.Models;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Input;
 
 namespace ExamenP3.ViewModels
 {
@@ -19,9 +22,11 @@ namespace ExamenP3.ViewModels
             }
         }
 
-        public ICommand ObtenerPaisesCommand { get; }
+        public ICommand ObtenerPaisesCommand { get; set; }
 
-        public MainViewModel()
+
+        // CONSTRUCTOR
+        public PaisesAPIviewModel()
         {
             string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "paises.db3");
             _dbHelper = new DatabaseHelper(dbPath);
@@ -66,20 +71,7 @@ namespace ExamenP3.ViewModels
             }
         }
 
-        private async Task<List<Pais>> ObtenerPaisesDeApiAsync()
-        {
-            string apiUrl = "URL_DE_LA_API"; // Reemplaza con la URL de la API
-            using (HttpClient client = new HttpClient())
-            {
-                HttpResponseMessage response = await client.GetAsync(apiUrl);
-                if (response.IsSuccessStatusCode)
-                {
-                    string jsonResponse = await response.Content.ReadAsStringAsync();
-                    return JsonConvert.DeserializeObject<List<Pais>>(jsonResponse);
-                }
-                return new List<Pais>();
-            }
-        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string name = null)
