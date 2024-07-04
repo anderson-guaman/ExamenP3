@@ -8,7 +8,7 @@ namespace ExamenP3.Models
 {
     public class Pais
     {
-        public string Name { get; set; }
+        public PaisName Name { get; set; }
         public string Region { get; set; }
         public string SubRegion { get; set; }
         public string Status { get; set; }
