@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamenP3", "ExamenP3\ExamenP3.csproj", "{11304C5B-4BC2-4943-B044-293BC3A77AF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11304C5B-4BC2-4943-B044-293BC3A77AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11304C5B-4BC2-4943-B044-293BC3A77AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11304C5B-4BC2-4943-B044-293BC3A77AF7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{11304C5B-4BC2-4943-B044-293BC3A77AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11304C5B-4BC2-4943-B044-293BC3A77AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11304C5B-4BC2-4943-B044-293BC3A77AF7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2D756D4-3E5B-484F-B661-FCF4DB11A8F6}
+	EndGlobalSection
+EndGlobal
