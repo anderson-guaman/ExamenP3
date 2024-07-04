@@ -1,4 +1,4 @@
-namespace ExamenP3.Views;
+namespace ExamenP3;
 
 public partial class PaisesAPIview : ContentPage
 {

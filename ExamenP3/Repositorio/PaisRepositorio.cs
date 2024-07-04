@@ -13,9 +13,8 @@ namespace ExamenP3.Repositorio
             var response = client.GetAsync("https://restcountries.com/v3.1/all");
             string response_json = await response.Result.Content.ReadAsStringAsync();
 
-            Pais chuck = JsonConvert.DeserializeObject<ChuckNorris>(response_json);
-
-            return chuck;
+            List<Pais> paises = JsonConvert.DeserializeObject<List<Pais>>(response_json);
+            return new List<Pais>();
         }
     }
 }

@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ExamenP3.Views.PaisesAPIview"
+             x:Class="ExamenP3.PaisesAPIview"
+             xmlns:local="clr-namespace:ExamenP3"
              Title="PaisesAPIview">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ContentPage.BindingContext>
+        <local:PaisesAPIviewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Button Text="Obtener Países" Command="{Binding ObtenerPaisesCommand}" />
+        <CollectionView ItemsSource="{Binding Paises}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Name.Official}" />
+                        <Label Text="{Binding Region}" />
+                        <Label Text="{Binding SubRegion}" />
+                        <Label Text="{Binding Status}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>
